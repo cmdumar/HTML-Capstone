@@ -11,13 +11,13 @@
     <ul class=nav-links>
       <li class=nav-item>
         <a class=nav-logo href=#>
-          <img src=assets/logo.svg alt="Logo" >
+          <img src=assets/logo.svg alt="Zattix Logo">
         </a>
       </li>
       <li class=nav-item>
         <a href=#>
           <span class=bg-icon>
-            <img src=assets/home-run.svg>
+            <img src=assets/home-run.svg alt="House icon">
           </span>
           HOME
         </a>
@@ -33,7 +33,7 @@
       <li class=nav-item>
         <a href=#>
           <span class=bg-icon>
-            <img src=assets/shopping-cart.svg>
+            <img src=assets/shopping-cart.svg alt="Shopping cart icon">
           </span>
           PURCHASE LIST
         </a>
@@ -48,7 +48,7 @@
       <li class=nav-item>
         <a href=#>
           <span class="bg-icon mail">
-            <img src=assets/mail.svg>
+            <img src=assets/mail.svg alt="Mail Icon">
           </span>
         </a>
       </li>
@@ -71,6 +71,7 @@
     <section class=search-container>
       <form>
         <select name=categories>
+          <option>All Departments</option>
           <option value=Phones>Phones</option>
           <option value=Laptops>Laptops</option>
           <option value=Headphones>Earphones</option>
@@ -91,5 +92,40 @@
       </form>
     </section>
   </header>
+
+  <main>
+    <section class="featured">
+      <h2>HOT ADS</h2>
+      <article>
+        <div class=phone-img>
+          <img src=assets/featured.jpg alt="iPhone X Phone" >
+        </div>
+        <div class="phone-details">
+          <h3>iPhone X (Space Gray)</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            By:
+            <span>Tom Doe</span>
+          </p>
+          <p>
+            Location:
+          <span>San Francisco</span>
+          </p>
+
+          <div class=buy-btn>
+            <button>$450</button>
+            <button>
+              <img src="assets/shopping-cart.svg" alt="Shopping cart icon">
+              Purchase details
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>  
+  </main>
 </body>
 </html>
