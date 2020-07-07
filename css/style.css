@@ -6,5 +6,160 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  font-family: sans-serif;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #383838;
+  padding: 10px 30px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+nav ul a {
+  color: #888;
+  text-decoration: none;
+}
+
+nav .nav-logo {
+  max-width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+nav .nav-logo img {
+  width: 100%;
+}
+
+nav .profile-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+nav .profile-pic div {
+  width: 30px;
+  padding-left: 10px;
+}
+
+nav .profile-pic div img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+nav .bg-icon {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  padding-right: 10px;
+}
+
+nav .bg-icon img {
+  width: 100%;
+}
+
+nav .mail {
+  position: relative;
+}
+
+nav .mail::before {
+  content: "3";
+  font-size: 8px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: #d35266;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0px;
+  bottom: 6px;
+  border-radius: 2px;
+}
+
+nav button {
+  background-color: #d35266;
+  color: #fff;
+  padding: 10px 13px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+header {
+  background-color: #d35266;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+
+header h3 {
+  font-size: 0.8rem;
+  font-weight: 100;
+  word-spacing: 2px;
+  letter-spacing: 1.3px;
+}
+
+header .search-container {
+  margin-top: 20px;
+}
+
+header .search-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .search-container select {
+  background-color: #fff;
+  color: #888;
+}
+
+header .search-container input {
+  background-color: #fff;
+  padding: 8px;
+  padding-right: 15px;
+  padding-left: 5px;
+  margin-left: 1px;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

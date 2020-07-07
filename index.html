@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
   <title>Zattix</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel=stylesheet href=css/style.css>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <nav>
+    <ul class=nav-links>
+      <li class=nav-item>
+        <a class=nav-logo href=#>
+          <img src=assets/logo.svg alt="Logo" >
+        </a>
+      </li>
+      <li class=nav-item>
+        <a href=#>
+          <span class=bg-icon>
+            <img src=assets/home-run.svg>
+          </span>
+          HOME
+        </a>
+      </li>
+      <li class=nav-item>
+        <a href=#>
+          <span class=bg-icon>
+            <img src=assets/number.svg>
+          </span>
+          COLLECTIONS
+        </a>
+      </li>
+      <li class=nav-item>
+        <a href=#>
+          <span class=bg-icon>
+            <img src=assets/shopping-cart.svg>
+          </span>
+          PURCHASE LIST
+        </a>
+      </li>
+      <li class=nav-item>
+        <button type=button>
+          POST AN AD
+        </button>
+      </li>
+    </ul>
+    <ul class=nav-profile>
+      <li class=nav-item>
+        <a href=#>
+          <span class="bg-icon mail">
+            <img src=assets/mail.svg>
+          </span>
+        </a>
+      </li>
+      <li class=nav-item>
+        <a class=profile-pic href=#>
+          Tom Doe
+          <div>
+            <img src=assets/profile-pic.jpg alt="Profile Picture">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class=title>
+      <h1>ZATTIX</h1>
+      <h3>Buying and Selling Couldn't be Simpler than this!</h3>
+    </section>
+    <section class=search-container>
+      <form>
+        <select name=categories>
+          <option value=Phones>Phones</option>
+          <option value=Laptops>Laptops</option>
+          <option value=Headphones>Earphones</option>
+          <option value=Tablets>Tablets</option>
+        </select>
+        <input 
+          name=sub-category
+          type=text
+          placeholder="What do you search for ?" />
+        <input 
+          name=search-term
+          type=text
+          placeholder=Search />
+        <button
+          class=search-btn
+          type=button>Search
+        </button>
+      </form>
+    </section>
+  </header>
 </body>
 </html>
