@@ -6,7 +6,17 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: sans-serif;
+  font-family: "Metropolis-Medium";
+}
+
+@font-face {
+  font-family: "Metropolis-Light";
+  src: url("Metropolis/Metropolis-Light.otf");
+}
+
+@font-face {
+  font-family: "Metropolis-Medium";
+  src: url("Metropolis/Metropolis-Medium.otf");
 }
 
 nav {
@@ -22,7 +32,6 @@ nav {
   background-color: #383838;
   padding: 10px 30px;
   font-size: 13px;
-  font-weight: 100;
 }
 
 nav ul {
@@ -40,8 +49,13 @@ nav ul li {
 }
 
 nav ul a {
+  font-family: "Metropolis-Light";
   color: #888;
   text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #d35266;
 }
 
 nav .nav-logo {
@@ -62,7 +76,7 @@ nav .profile-pic {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  font-weight: 500;
+  font-family: "Metropolis-Medium";
 }
 
 nav .profile-pic div {
@@ -156,6 +170,7 @@ header .search-container form select {
   color: #888;
   width: 100%;
   font-size: 12px;
+  font-family: "Metropolis-Light";
 }
 
 header .search-container form input {
@@ -165,6 +180,7 @@ header .search-container form input {
   margin-left: 1px;
   width: 100%;
   font-size: 12px;
+  font-family: "Metropolis-Light";
 }
 
 header .search-container form .search-btn {
@@ -191,7 +207,6 @@ main .featured {
 }
 
 main .featured h2 {
-  font-weight: 100;
   font-size: 23px;
   color: #888;
   text-align: left;
@@ -229,6 +244,7 @@ main .featured article .phone-details p {
 }
 
 main .featured article .phone-details p span {
+  font-family: "Metropolis-Light";
   color: #888;
 }
 
@@ -244,7 +260,6 @@ main .featured article .phone-details .buy-btn button {
   font-weight: 100;
   padding: 10px 13px;
   background: #d35266;
-  font-weight: 500;
   font-size: 15px;
   color: #fff;
 }
@@ -274,6 +289,14 @@ main .featured article .phone-details .buy-btn button:last-child img {
 main .gray-bg {
   padding: 20px 10px;
   background-color: #f3f3f3;
+}
+
+main .gray-bg .fixed-w {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main .gray-bg .electronics, main .gray-bg .pets, main .gray-bg .fashion {
   position: relative;
 }
 
@@ -313,41 +336,56 @@ main .gray-bg .tagline:after {
   -ms-flex-item-align: end;
       align-self: flex-end;
   height: 1px;
-  background-color: #aaa;
+  background-color: rgba(0, 0, 0, 0.1);
   display: block;
 }
 
 main .gray-bg ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 30px;
   list-style: none;
 }
 
 main .gray-bg ul li {
   background-color: #fff;
-  border: 1px solid #ccc;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+main .gray-bg ul li .equal-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .gray-bg ul li .equal-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .gray-bg ul li .product-data {
   padding: 10px;
 }
 
-main .gray-bg ul li a {
-  color: #383838;
-  text-decoration: none;
-}
-
-main .gray-bg ul li a img {
-  width: 100%;
-}
-
-main .gray-bg ul li a h3 {
+main .gray-bg ul li h3 {
   font-size: 16px;
   padding-bottom: 5px;
   font-weight: 400;
 }
 
-main .gray-bg ul li a span {
+main .gray-bg ul li span {
   color: #d35266;
   padding-bottom: 5px;
   display: inline-block;
@@ -355,13 +393,13 @@ main .gray-bg ul li a span {
   font-weight: 700;
 }
 
-main .gray-bg ul li a p {
-  font-weight: 100;
+main .gray-bg ul li p {
+  font-family: "Metropolis-Light";
   font-size: 12px;
   padding-bottom: 10px;
 }
 
-main .gray-bg ul li a div {
+main .gray-bg ul li div:not(.product-data) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,12 +411,12 @@ main .gray-bg ul li a div {
           align-items: center;
 }
 
-main .gray-bg ul li a div span {
+main .gray-bg ul li div:not(.product-data) span {
   display: block;
   font-size: 12px;
 }
 
-main .gray-bg ul li a div span:first-child {
+main .gray-bg ul li div:not(.product-data) span:first-child {
   color: #888;
   font-size: 14px;
   border: 1px solid #888;
