@@ -40,6 +40,14 @@ $light: #f3f3f3;
   font-family: "Metropolis-Medium";
 }
 
+.font-100 {
+  @include font-100;
+}
+
+.font-500 {
+  @include font-500;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -358,5 +366,122 @@ main {
         }
       }
     }
+  }
+}
+
+footer {
+  .footer-nav {
+    padding: 30px 20px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    border-top: 1px solid #ccc;
+
+    .about {
+      display: grid;
+      place-items: center;
+      text-align: justify;
+
+      div {
+        display: flex;
+        align-items: center;
+        span {
+          display: inline-block;
+        }
+      }
+
+      p {
+        @include font-100;
+        font-size: 14px;
+      }
+
+      img {
+        height: 50px;
+        padding-bottom: 10px;
+      }
+    }
+
+    .nav-lists {
+      align-self: flex-start;
+
+      h2 {
+        color: $accent;
+        padding-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding-top: 10px;
+        position: relative;
+        border-top: 1px solid $accent;
+
+        li {
+          padding-bottom: 10px;
+          
+          a {
+            @include font-100;
+            text-decoration: none;
+            color: $secondary;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .region {
+      align-self: center;
+      div {
+        display: flex;
+        align-items: center;
+        padding-bottom: 15px;
+        h2 {
+          color: $accent;
+          text-align: left;
+        }
+        button {
+          @include font-100;
+          margin-left: 10px;
+          background-color: #fff;
+          border: 1px solid $light;
+          padding: 7px 15px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f3f3;
+    .copyright-text {
+      padding: 20px;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        padding: 0 10px;
+      }
+      img {
+        height: 18px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  header {
+    display: none;
+  }
+
+  .featured {
+    display: none;
   }
 }
