@@ -159,10 +159,11 @@ header {
 }
 
 main {
-  padding: 20px 50px;
-  display: grid;
-  place-items: center;
+  width: 100%;
   .featured {
+    max-width: 1310px;
+    padding: 20px 50px;
+    margin: 0 auto;
     h2 {
       font-weight: 100;
       font-size: 23px;
@@ -219,6 +220,103 @@ main {
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  .gray-bg {
+    padding: 20px 10px;
+    background-color: #f3f3f3;
+    position: relative;
+
+    .tagline {
+      padding-bottom: 20px;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      color: $primary;
+      
+      img {
+        width: 25px;
+        display: inline-block;
+        padding-right: 10px;
+      }
+
+      p {
+        display: inline-block;
+        span {
+          color: $secondary;
+          font-size: 12px;
+        }
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        margin-top: 10px;
+        left: 0;
+        align-self: flex-end;
+        height: 1px;
+        background-color: #aaa;
+        display: block;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      list-style: none;
+      li {
+        background-color: $white;
+        border: 1px solid #ccc;
+        padding: 10px;
+
+        a {
+          color: $primary;
+          text-decoration: none;
+
+          img {
+            width: 100%;
+          }
+          
+          h3 {
+            font-size: 16px;
+            padding-bottom: 5px;
+            font-weight: 400;
+          }
+
+          span {
+            color: $accent;
+            padding-bottom: 5px;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+          }
+
+          p {
+            font-weight: 100;
+            font-size: 12px;
+            padding-bottom: 10px;
+          }
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              display: block;
+              font-size: 12px;
+              &:first-child {
+                color: $secondary;
+                font-size: 14px;
+                border: 1px solid $secondary;
+                padding: 3px 7px;
+              }
+            }
+          }
+
         }
       }
     }

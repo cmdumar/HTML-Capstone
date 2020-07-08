@@ -181,10 +181,13 @@ header .search-container form .search-btn {
 }
 
 main {
+  width: 100%;
+}
+
+main .featured {
+  max-width: 1310px;
   padding: 20px 50px;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  margin: 0 auto;
 }
 
 main .featured h2 {
@@ -266,5 +269,119 @@ main .featured article .phone-details .buy-btn button:last-child {
 main .featured article .phone-details .buy-btn button:last-child img {
   width: 12px;
   padding-right: 7px;
+}
+
+main .gray-bg {
+  padding: 20px 10px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+main .gray-bg .tagline {
+  padding-bottom: 20px;
+  padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #383838;
+}
+
+main .gray-bg .tagline img {
+  width: 25px;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+main .gray-bg .tagline p {
+  display: inline-block;
+}
+
+main .gray-bg .tagline p span {
+  color: #888;
+  font-size: 12px;
+}
+
+main .gray-bg .tagline:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 1px;
+  background-color: #aaa;
+  display: block;
+}
+
+main .gray-bg ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  list-style: none;
+}
+
+main .gray-bg ul li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+main .gray-bg ul li a {
+  color: #383838;
+  text-decoration: none;
+}
+
+main .gray-bg ul li a img {
+  width: 100%;
+}
+
+main .gray-bg ul li a h3 {
+  font-size: 16px;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+main .gray-bg ul li a span {
+  color: #d35266;
+  padding-bottom: 5px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+main .gray-bg ul li a p {
+  font-weight: 100;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+main .gray-bg ul li a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .gray-bg ul li a div span {
+  display: block;
+  font-size: 12px;
+}
+
+main .gray-bg ul li a div span:first-child {
+  color: #888;
+  font-size: 14px;
+  border: 1px solid #888;
+  padding: 3px 7px;
 }
 /*# sourceMappingURL=style.css.map */
