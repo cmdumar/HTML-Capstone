@@ -15,7 +15,7 @@ HTML and CSS Capstone Project for Microverse
 
 ## Live Demo
 
-[Live Demo Link](https://relaxed-johnson-d5b2cd.netlify.app/)
+[Live Demo Link](https://compassionate-chandrasekhar-689ef9.netlify.app/)
 
 
 ## Authors
