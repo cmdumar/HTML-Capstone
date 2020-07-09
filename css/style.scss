@@ -270,74 +270,57 @@ main {
       text-align: left;
     }
 
+    .phone-img {
+      width: 300px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .phone-details {
+      margin-left: 20px;
+
+      h3 {
+        color: $accent;
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        padding-bottom: 10px;
+
+        span {
+          @include font-100;
+
+          color: $secondary;
+        }
+      }
+    }
+
     article {
       display: grid;
       grid-template-columns: 300px 1fr;
       padding-top: 20px;
-
-      .phone-img {
-        width: 300px;
-
-        img {
-          width: 100%;
-        }
-      }
-
-      .phone-details {
-        margin-left: 20px;
-
-        h3 {
-          color: $accent;
-          font-size: 18px;
-          padding-bottom: 10px;
-        }
-
-        p {
-          font-size: 14px;
-          padding-bottom: 10px;
-
-          span {
-            @include font-100;
-
-            color: $secondary;
-          }
-        }
-
-        .buy-btn {
-          display: flex;
-
-          button {
-            @include btn;
-
-            background: $accent;
-            font-size: 15px;
-            color: $white;
-
-            &:first-child {
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-            }
-
-            &:last-child {
-              border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-              border-left: 1px solid rgba(51, 51, 51, 0.5);
-              display: flex;
-              align-items: center;
-
-              img {
-                width: 12px;
-                padding-right: 7px;
-              }
-            }
-          }
-        }
-      }
     }
   }
 
   .homepage {
     padding: 20px 10px;
+
+    .equal-img {
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .product-data {
+      padding: 10px;
+    }
 
     .fixed-w {
       max-width: 1200px;
@@ -352,8 +335,7 @@ main {
     }
 
     .tagline {
-      padding-bottom: 20px;
-      padding: 20px 20px;
+      padding: 20px;
       display: flex;
       align-items: center;
       color: $primary;
@@ -399,20 +381,6 @@ main {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-        .equal-img {
-          display: flex;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-
-        .product-data {
-          padding: 10px;
-        }
 
         h3 {
           font-size: 16px;
@@ -616,32 +584,6 @@ footer {
         }
       }
     }
-
-    .region {
-      justify-self: center;
-      align-self: center;
-
-      div {
-        display: flex;
-        align-items: center;
-        padding-bottom: 15px;
-
-        h2 {
-          color: $accent;
-          text-align: left;
-        }
-
-        button {
-          @include font-100;
-
-          margin-left: 10px;
-          background-color: #fff;
-          border: 1px solid $light;
-          padding: 7px 15px;
-          font-size: 13px;
-        }
-      }
-    }
   }
 
   .copyright {
@@ -667,6 +609,62 @@ footer {
       img {
         height: 18px;
       }
+    }
+  }
+}
+
+.buy-btn {
+  display: flex;
+
+  button {
+    @include btn;
+
+    background: $accent;
+    font-size: 15px;
+    color: $white;
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: 1px solid rgba(51, 51, 51, 0.5);
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 12px;
+        padding-right: 7px;
+      }
+    }
+  }
+}
+
+.region {
+  justify-self: center;
+  align-self: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    h2 {
+      color: $accent;
+      text-align: left;
+    }
+
+    button {
+      @include font-100;
+
+      margin-left: 10px;
+      background-color: #fff;
+      border: 1px solid $light;
+      padding: 7px 15px;
+      font-size: 13px;
     }
   }
 }
