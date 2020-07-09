@@ -15,6 +15,14 @@ $light: #f3f3f3;
   font-family: "Metropolis-Medium";
 }
 
+button, a {
+  cursor: pointer;
+}
+
+.gray-bg {
+  background-color: #f3f3f3;
+}
+
 @font-face {
   font-family: "Metropolis-Light";
   src: url("Metropolis/Metropolis-Light.otf");
@@ -48,6 +56,10 @@ $light: #f3f3f3;
   @include font-500;
 }
 
+.mobile-show {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -59,6 +71,7 @@ nav {
     display: flex;
     list-style: none;
     align-items: center;
+    max-width: fit-content;
     li {
       padding: 0 10px;
     }
@@ -133,7 +146,6 @@ nav {
 header {
   background-color: $accent;
   padding: 30px;
-  place-items: center;
   color: $white;
   text-align: center;
 
@@ -160,21 +172,22 @@ header {
       margin: auto;
 
       select {
+        @include font-100;
         background-color: $white;
         color: $secondary;
         width: 100%;
         font-size: 12px;
-        @include font-100;
+        width: fit-content;
       }
   
       input {
+        @include font-100;
         background-color: $white;
         padding: 8px;
         padding-left: 5px;
         margin-left: 1px;
         width: 100%;
         font-size: 12px;
-        @include font-100;
       }
 
       .search-btn {
@@ -185,6 +198,39 @@ header {
         border-radius: 0;
         margin-left: 5px;
         padding: 10px 20px;
+      }
+    }
+  }
+}
+
+.result-page {
+  text-align: left;
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .search-container {
+    margin-top: 10px;
+    form {
+      max-width: inherit;
+
+      select {
+        color: $primary;
+        @include font-500;
+      }
+
+      input {
+        color: $primary;
+        @include font-500;
+
+        &::placeholder {
+          color: $secondary;
+          @include font-100;
+        }
       }
     }
   }
@@ -201,6 +247,7 @@ main {
       color: $secondary;
       text-align: left;
     }
+
     article {
       display: grid;
       grid-template-columns: 300px 1fr;
@@ -256,16 +303,15 @@ main {
     }
   }
 
-  .gray-bg {
+  .homepage {
     padding: 20px 10px;
-    background-color: #f3f3f3;
 
     .fixed-w {
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .electronics, .pets, .fashion {
+    .electronics, .pets, .fashion, .automotives {
       position: relative;
     }
 
@@ -369,12 +415,94 @@ main {
   }
 }
 
+.result-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  .homepage {
+    padding: 20px 0;
+
+    h2 {
+      padding: 0 10px;
+      padding-bottom: 10px;
+      @include font-100;
+      color: $secondary;
+      font-size: 14px;
+    }
+  }
+
+  .product-options {
+    padding: 10px 25px;
+    border-right: 1px solid #ccc;
+
+    h3 {
+      padding-bottom: 10px;
+    }
+
+    a {
+      @include font-100;
+      text-decoration: none;
+      color: $secondary;
+      font-size: 15px;
+      &:hover {
+        color: #383838;
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding-bottom: 3px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    span {
+      @include font-100;
+      color: $secondary;
+      font-size: 15px;
+    }
+
+    div {
+      margin: 10px 0;
+    }
+  }
+
+  .product-list {
+    position: relative;
+    border-top: 1px solid #ccc;
+    width: 100%;
+
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    li {
+      grid-template-columns: 1fr 1fr;
+      div:not(.product-data) {
+        span {
+          &:first-child {
+            border: 0;
+            @include font-100;
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
   .footer-nav {
     padding: 30px 20px;
     display: grid;
-    place-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: start;
     border-top: 1px solid #ccc;
 
@@ -388,6 +516,8 @@ footer {
         align-items: center;
         span {
           display: inline-block;
+          padding-left: 10px;
+          font-size: 22px;
         }
       }
 
@@ -404,6 +534,8 @@ footer {
 
     .nav-lists {
       align-self: flex-start;
+      display: flex;
+      justify-content: space-around;
 
       h2 {
         color: $accent;
@@ -424,6 +556,7 @@ footer {
             text-decoration: none;
             color: $secondary;
             &:hover {
+              color: #000;
               text-decoration: underline;
             }
           }
@@ -432,6 +565,7 @@ footer {
     }
 
     .region {
+      justify-self: center;
       align-self: center;
       div {
         display: flex;
@@ -460,6 +594,7 @@ footer {
     border-top: 1px solid #f3f3f3;
     .copyright-text {
       padding: 20px;
+      color: $secondary;
     }
     .social-icons {
       display: flex;
@@ -475,13 +610,48 @@ footer {
   }
 }
 
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
   header {
     display: none;
   }
 
   .featured {
     display: none;
+  }
+
+  .nav-profile {
+    display: none;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+
+  nav {
+    padding: 10px 5px;
+    ul {
+      margin: 0 auto;
+    }
+  }
+
+  .result-wrapper {
+    grid-template-columns: 1fr;
+    .product-options {
+      display: none;
+    }
+
+    .product-list {
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      li {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }

@@ -10,19 +10,19 @@
   <nav>
     <ul class=nav-links>
       <li class=nav-item>
-        <a class=nav-logo href=#>
+        <a class=nav-logo href=index.html>
           <img src=assets/logo.svg alt="Zattix Logo">
         </a>
       </li>
       <li class=nav-item>
-        <a href=#>
+        <a href=index.html>
           <span class=bg-icon>
             <img src=assets/home-run.svg alt="House icon">
           </span>
           HOME
         </a>
       </li>
-      <li class=nav-item>
+      <li class="nav-item mobile-hide">
         <a href=#>
           <span class=bg-icon>
             <img src=assets/number.svg>
@@ -38,9 +38,16 @@
           PURCHASE LIST
         </a>
       </li>
-      <li class=nav-item>
+      <li class="nav-item mobile-hide">
         <button type=button>
           POST AN AD
+        </button>
+      </li>
+      <li class="nav-item mobile-show">
+        <button 
+          type=button
+          onclick="location.href='result.html'">
+          Search
         </button>
       </li>
     </ul>
@@ -72,10 +79,10 @@
       <form>
         <select name=categories>
           <option>All Departments</option>
-          <option value=Phones>Phones</option>
-          <option value=Laptops>Laptops</option>
-          <option value=Headphones>Earphones</option>
-          <option value=Tablets>Tablets</option>
+          <option value=Electronics>Electronics</option>
+          <option value=Pets>Pets</option>
+          <option value=Fashion>Fashion</option>
+          <option value=Automotives>Automotives</option>
         </select>
         <input 
           name=sub-category
@@ -87,7 +94,9 @@
           placeholder=Search />
         <button
           class=search-btn
-          type=button>Search
+          type=button
+          onclick="location.href='result.html'"
+          >Search
         </button>
       </form>
     </section>
@@ -128,14 +137,14 @@
     </section>
 
 
-    <div class=gray-bg>
+    <div class="gray-bg homepage">
       <div class="fixed-w">
         <section class=electronics>
           <div class=tagline>
             <img src=assets/responsive.svg>
             <p>
               Electronics
-              <span>(Computers, Tablets, Mobile Phones, Cameras and Lenses.)</span>
+              <span>(Computers, Tablets, Mobile Phones and Cameras.)</span>
             </p>
           </div>
 
@@ -435,7 +444,7 @@
       <section class="about">
         <div>
           <img src=assets/logo.svg alt=Logo>
-          <span class="font-100">ZATTIX</span>
+          <span class="font-500">ZATTIX</span>
         </div>
         <p>
           Lorem ipsum dolor sit amet, 
@@ -447,58 +456,59 @@
         </p>
       </section>
       <section class="nav-lists">
-        <h2>Categories</h2>
+        <div>
+          <h2>Categories</h2>
+          <ul>
+            <li class="cat-item">
+              <a href=#>Pets</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Fashion</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Electronic</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Food & Drinks</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Clothing</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Kids</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Automotives</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Kitchen</a>
+            </li>
+          </ul>
+        </div>
 
-        <ul>
-          <li class="cat-item">
-            <a href=#>Pets</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Fashion</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Electronic</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Food & Drinks</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Clothing</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Kids</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Automotives</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Kitchen</a>
-          </li>
-        </ul>
-      </section>
-      <section class="nav-lists">
-        <h2>Navigation</h2>
-
-        <ul>
-          <li class="cat-item">
-            <a href=#>Home</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Login</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Sign up</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Terms & Conditions</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>FAQ</a>
-          </li>
-          <li class="cat-item">
-            <a href=#>Help</a>
-          </li>
-        </ul>
+        <div>
+          <h2>Navigation</h2>
+          <ul>
+            <li class="cat-item">
+              <a href=#>Home</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Login</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Sign up</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Terms & Conditions</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>FAQ</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Help</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="region">
         <div>
