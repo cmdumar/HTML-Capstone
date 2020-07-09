@@ -11,7 +11,7 @@ HTML and CSS Capstone Project for Microverse
 ## Built With
 
 - HTML
-- CSS
+- Sass
 
 ## Live Demo
 
