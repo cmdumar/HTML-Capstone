@@ -6,10 +6,11 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: "Metropolis-Medium";
+  font-family: "Metropolis-Medium", sans-serif;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
@@ -28,11 +29,11 @@ button, a {
 }
 
 .font-100 {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 .font-500 {
-  font-family: "Metropolis-Medium";
+  font-family: "Metropolis-Medium", sans-serif;
 }
 
 .mobile-show {
@@ -72,7 +73,7 @@ nav ul li {
 }
 
 nav ul a {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   color: #888;
   text-decoration: none;
 }
@@ -91,6 +92,17 @@ nav .nav-logo img {
   width: 100%;
 }
 
+nav .bg-icon {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  padding-right: 10px;
+}
+
+nav .bg-icon img {
+  width: 100%;
+}
+
 nav .profile-pic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +111,7 @@ nav .profile-pic {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  font-family: "Metropolis-Medium";
+  font-family: "Metropolis-Medium", sans-serif;
 }
 
 nav .profile-pic div {
@@ -109,17 +121,6 @@ nav .profile-pic div {
 
 nav .profile-pic div img {
   border-radius: 15px;
-  width: 100%;
-}
-
-nav .bg-icon {
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  padding-right: 10px;
-}
-
-nav .bg-icon img {
   width: 100%;
 }
 
@@ -138,7 +139,7 @@ nav .mail::before {
   position: absolute;
   width: 12px;
   height: 12px;
-  right: 0px;
+  right: 0;
   bottom: 6px;
   border-radius: 2px;
 }
@@ -188,10 +189,9 @@ header .search-container form {
 }
 
 header .search-container form select {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   background-color: #fff;
   color: #888;
-  width: 100%;
   font-size: 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -199,7 +199,7 @@ header .search-container form select {
 }
 
 header .search-container form input {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   background-color: #fff;
   padding: 8px;
   padding-left: 5px;
@@ -244,32 +244,32 @@ header .search-container form .search-btn {
 
 .result-page .search-container form select {
   color: #383838;
-  font-family: "Metropolis-Medium";
+  font-family: "Metropolis-Medium", sans-serif;
 }
 
 .result-page .search-container form input {
   color: #383838;
-  font-family: "Metropolis-Medium";
+  font-family: "Metropolis-Medium", sans-serif;
 }
 
 .result-page .search-container form input::-webkit-input-placeholder {
   color: #888;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 .result-page .search-container form input:-ms-input-placeholder {
   color: #888;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 .result-page .search-container form input::-ms-input-placeholder {
   color: #888;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 .result-page .search-container form input::placeholder {
   color: #888;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 main {
@@ -320,7 +320,7 @@ main .featured article .phone-details p {
 }
 
 main .featured article .phone-details p span {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   color: #888;
 }
 
@@ -371,7 +371,10 @@ main .homepage .fixed-w {
   margin: 0 auto;
 }
 
-main .homepage .electronics, main .homepage .pets, main .homepage .fashion, main .homepage .automotives {
+main .homepage .electronics,
+main .homepage .pets,
+main .homepage .fashion,
+main .homepage .automotives {
   position: relative;
 }
 
@@ -402,7 +405,7 @@ main .homepage .tagline p span {
   font-size: 12px;
 }
 
-main .homepage .tagline:after {
+main .homepage .tagline::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -469,7 +472,7 @@ main .homepage ul li span {
 }
 
 main .homepage ul li p {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   font-size: 12px;
   padding-bottom: 10px;
 }
@@ -512,7 +515,7 @@ main .homepage ul li div:not(.product-data) span:first-child {
 .result-wrapper .homepage h2 {
   padding: 0 10px;
   padding-bottom: 10px;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   color: #888;
   font-size: 14px;
 }
@@ -527,7 +530,7 @@ main .homepage ul li div:not(.product-data) span:first-child {
 }
 
 .result-wrapper .product-options a {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   text-decoration: none;
   color: #888;
   font-size: 15px;
@@ -554,7 +557,7 @@ main .homepage ul li div:not(.product-data) span:first-child {
 }
 
 .result-wrapper .product-options span {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   color: #888;
   font-size: 15px;
 }
@@ -581,7 +584,7 @@ main .homepage ul li div:not(.product-data) span:first-child {
 
 .result-wrapper .product-list li div:not(.product-data) span:first-child {
   border: 0;
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
 }
 
 footer .footer-nav {
@@ -620,7 +623,7 @@ footer .footer-nav .about div span {
 }
 
 footer .footer-nav .about p {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   font-size: 14px;
 }
 
@@ -656,7 +659,7 @@ footer .footer-nav .nav-lists ul li {
 }
 
 footer .footer-nav .nav-lists ul li a {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   text-decoration: none;
   color: #888;
 }
@@ -690,7 +693,7 @@ footer .footer-nav .region div h2 {
 }
 
 footer .footer-nav .region div button {
-  font-family: "Metropolis-Light";
+  font-family: "Metropolis-Light", sans-serif;
   margin-left: 10px;
   background-color: #fff;
   border: 1px solid #f3f3f3;
