@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <ul class=nav-links>
+  <nav class="flex align-items-center space-between">
+    <ul class="nav-links flex align-items-center">
       <li class=nav-item>
         <a class=nav-logo href=index.html>
           <img src=assets/logo.svg alt="Zattix Logo">
@@ -49,7 +49,7 @@
         </button>
       </li>
     </ul>
-    <ul class=nav-profile>
+    <ul class="nav-profile flex align-items-center">
       <li class=nav-item>
         <a href=#>
           <span class="bg-icon mail">
@@ -58,7 +58,7 @@
         </a>
       </li>
       <li class=nav-item>
-        <a class=profile-pic href=#>
+        <a class="profile-pic flex align-items-center" href=#>
           Tom Doe
           <div>
             <img src=assets/profile-pic.jpg alt="Profile Picture">
@@ -69,13 +69,13 @@
   </nav>
 
   <header class=result-page>
-    <div>
+    <div class="grid">
       <section class=title>
         <h1>ZATTIX</h1>
         <h3 class="font-100">Search around 124,000 Items waiting to be sold!</h3>
       </section>
       <section class=search-container>
-        <form>
+        <form class=flex>
           <select class="select-css" name=categories>
             <option>All Departments</option>
             <option value=Electronics>Electronics</option>
@@ -102,9 +102,9 @@
     </div>
   </header>
 
-  <main class="result-wrapper gray-bg fixed-w">
+  <main class="result-wrapper grid gray-bg fixed-w">
     <section class="product-options">
-      <form>
+      <form class="grid">
         <div class=new-old>
           <input type="checkbox" >
           <span>Used</span>
@@ -162,9 +162,9 @@
           <h2>134 Results for "Car" Search at United States in Category Automotives</h2>
           <section class=automotives>
             <div class=product-list>
-              <ul>
-                <li>
-                    <div class="equal-img">
+              <ul class="grid">
+                <li class="grid">
+                    <div class="equal-img flex">
                       <img src=https://source.unsplash.com/YApiWyp0lqo/1920x1280 alt="Electronic Product">
                     </div>
                     <div class=product-data>
@@ -176,14 +176,14 @@
                         sed do eiusmod tempor incididunt ut labore
                       </p>
                       <p>Location: San Francisco</p>
-                      <div>
+                      <div class="flex space-between">
                         <span>23 July 2019</span>
                         <span>$80,000</span>
                       </div>
                     </div>
                 </li>
-                <li>
-                    <div class="equal-img">
+                <li class="grid">
+                    <div class="equal-img flex">
                       <img src=https://source.unsplash.com/3ZUsNJhi_Ik/1920x1280 alt="Electronic Product">
                     </div>
                     <div class=product-data>
@@ -195,14 +195,14 @@
                         sed do eiusmod tempor incididunt ut labore
                       </p>
                       <p>Location: Santa Barbara</p>
-                      <div>
+                      <div class="flex space-between">
                         <span>19 Dec, 2018</span>
                         <span>$75,000</span>
                       </div>
                     </div>
                 </li>
-                <li>
-                    <div class="equal-img">
+                <li class="grid">
+                    <div class="equal-img flex">
                       <img src=https://source.unsplash.com/4WBvCqeMaDE/1920x1280 alt="Electronic Product">
                     </div>
                     <div class=product-data>
@@ -214,14 +214,14 @@
                         sed do eiusmod tempor incididunt ut labore
                       </p>
                       <p>Location: New York</p>
-                      <div>
+                      <div class="flex space-between">
                         <span>18 Jan, 2020</span>
                         <span>$60,000</span>
                       </div>
                     </div>
                 </li>
-                <li>
-                  <div class="equal-img">
+                <li class="grid">
+                  <div class="equal-img flex">
                     <img src=https://source.unsplash.com/1R63taCoSnM/1920x1280 alt="Electronic Product">
                   </div>
                   <div class=product-data>
@@ -233,14 +233,14 @@
                       sed do eiusmod tempor incididunt ut labore
                     </p>
                     <p>Location: Atlanta</p>
-                    <div>
+                    <div class="flex space-between">
                       <span>21 Feb, 2019</span>
                       <span>$100,000</span>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="equal-img">
+                <li class="grid">
+                  <div class="equal-img flex">
                     <img src=https://source.unsplash.com/5coOJ1LzHds/1920x1280 alt="Electronic Product">
                   </div>
                   <div class=product-data>
@@ -252,14 +252,14 @@
                       sed do eiusmod tempor incididunt ut labore
                     </p>
                     <p>Location: San Francisco</p>
-                    <div>
+                    <div class="flex space-between">
                       <span>23 Nov, 2014</span>
                       <span>$30,000</span>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="equal-img">
+                <li class="grid">
+                  <div class="equal-img flex">
                     <img src=https://source.unsplash.com/Qm_n6aoYzDs/1920x1280 alt="Electronic Product">
                   </div>
                   <div class=product-data>
@@ -269,7 +269,7 @@
                       consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore</p>
                     <p>Location: San Francisco</p>
-                    <div>
+                    <div class="flex space-between">
                       <span>4 Mar, 2020</span>
                       <span>$40,000</span>
                     </div>
@@ -282,9 +282,9 @@
   </main>
 
   <footer>
-    <div class="footer-nav">
-      <section class="about">
-        <div>
+    <div class="footer-nav grid">
+      <section class="about grid">
+        <div class="flex align-items-center">
           <img src=assets/logo.svg alt=Logo>
           <span class="font-500">ZATTIX</span>
         </div>
@@ -297,7 +297,7 @@
           aliquip ex ea commodo consequat.
         </p>
       </section>
-      <section class="nav-lists">
+      <section class="nav-lists flex">
         <div>
           <h2>Categories</h2>
           <ul>
@@ -353,27 +353,27 @@
         </div>
       </section>
       <section class="region">
-        <div>
+        <div class="flex align-items-center">
           <h2>COUNTRY</h2>
           <button type="button">United States</button>
         </div>
-        <div>
+        <div class="flex align-items-center">
           <h2>LANGUAGE</h2>
           <button type="button">English</button>
         </div>
-        <div>
+        <div class="flex align-items-center">
           <h2>CURRENCY</h2>
           <button type="button">US Dollar</button>
         </div>
       </section>
     </div>
-    <div class="copyright">
-      <section class="copyright-text">
+    <div class="copyright flex align-items-center space-between">
+      <section class="copyright-text align-items-center">
         <p class="font-100">
           Copyright © 2015 Zattix.com. All Rights Reserved.
         </p>
       </section>
-      <section class="social-icons">
+      <section class="social-icons flex">
         <div>
           <a href=#>
             <img src=assets/twitter.svg alt="social icons">

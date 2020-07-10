@@ -48,52 +48,25 @@ a {
   display: none;
 }
 
-.result-page div,
-nav .mail::before,
-main .featured article,
-main .homepage ul,
-main .homepage ul li,
-.result-wrapper,
-.result-wrapper .product-options form,
-footer .footer-nav,
-footer .footer-nav .about {
+.grid {
   display: -ms-grid;
   display: grid;
 }
 
-nav, nav ul, nav .profile-pic, .region div,
-header .search-container form,
-main .homepage .equal-img,
-main .homepage .tagline,
-footer .footer-nav .about div,
-footer .footer-nav .nav-lists,
-footer .copyright,
-footer .copyright .social-icons,
-main .homepage ul li div:not(.product-data),
-.buy-btn,
-.buy-btn button:last-child {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: row;
 }
 
-nav,
-nav ul,
-nav .profile-pic,
-.region div,
-main .homepage .tagline,
-footer .footer-nav .about div,
-footer .copyright,
-footer .copyright .social-icons {
+.align-items-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-nav,
-footer .copyright,
-main .homepage ul li div:not(.product-data) {
+.space-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -178,6 +151,8 @@ nav .mail {
 }
 
 nav .mail::before {
+  display: -ms-grid;
+  display: grid;
   content: "3";
   font-size: 8px;
   place-content: center;
