@@ -9,6 +9,10 @@
   font-family: "Metropolis-Medium", sans-serif;
 }
 
+main {
+  width: 100%;
+}
+
 button,
 a {
   cursor: pointer;
@@ -40,31 +44,48 @@ a {
   display: none;
 }
 
-nav {
+nav, nav ul, nav .profile-pic, .region div,
+header .search-container form,
+main .homepage .equal-img,
+main .homepage .tagline,
+footer .footer-nav .about div,
+footer .footer-nav .nav-lists,
+footer .copyright,
+footer .copyright .social-icons,
+main .homepage ul li div:not(.product-data),
+.buy-btn,
+.buy-btn button:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+}
+
+nav,
+nav ul,
+nav .profile-pic,
+.region div,
+main .homepage .tagline,
+footer .footer-nav .about div,
+footer .copyright,
+footer .copyright .social-icons {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+nav {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   background-color: #383838;
   padding: 10px 30px;
   font-size: 13px;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   flex-direction: row;
   list-style: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -106,13 +127,6 @@ nav .bg-icon img {
 }
 
 nav .profile-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: #fff;
   font-family: "Metropolis-Medium", sans-serif;
 }
@@ -127,13 +141,6 @@ nav .profile-pic {
 }
 
 .region div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding-bottom: 15px;
 }
 
@@ -201,9 +208,6 @@ header .search-container {
 }
 
 header .search-container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -251,40 +255,16 @@ header .search-container form .search-btn {
 
 .result-page .search-container form {
   max-width: inherit;
-}
-
-.result-page .search-container form select {
   color: #383838;
   font-family: "Metropolis-Medium", sans-serif;
 }
 
-.result-page .search-container form input {
-  color: #383838;
-  font-family: "Metropolis-Medium", sans-serif;
-}
-
-.result-page .search-container form input::-webkit-input-placeholder {
-  color: #888;
-  font-family: "Metropolis-Light", sans-serif;
-}
-
-.result-page .search-container form input::-ms-input-placeholder {
-  color: #888;
-  font-family: "Metropolis-Light", sans-serif;
-}
-
-.result-page .search-container form input:-ms-input-placeholder {
-  color: #888;
-  font-family: "Metropolis-Light", sans-serif;
-}
-
+.result-page .search-container form input::-webkit-input-placeholder,
+.result-page .search-container form input::-ms-input-placeholder,
+.result-page .search-container form input:-ms-input-placeholder,
 .result-page .search-container form input::placeholder {
   color: #888;
   font-family: "Metropolis-Light", sans-serif;
-}
-
-main {
-  width: 100%;
 }
 
 main .featured {
@@ -369,12 +349,6 @@ main .homepage {
   padding: 20px 10px;
 }
 
-main .homepage .equal-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 main .homepage .equal-img img {
   width: 100%;
   height: 100%;
@@ -400,12 +374,6 @@ main .homepage .automotives {
 
 main .homepage .tagline {
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: #383838;
 }
 
@@ -548,15 +516,6 @@ footer .footer-nav .about {
   text-align: justify;
 }
 
-footer .footer-nav .about div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 footer .footer-nav .about div span {
   display: inline-block;
   padding-left: 10px;
@@ -576,9 +535,6 @@ footer .footer-nav .about img {
 footer .footer-nav .nav-lists {
   -ms-flex-item-align: start;
   align-self: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -616,15 +572,9 @@ footer .footer-nav .nav-lists ul li a:hover {
 }
 
 footer .copyright {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   border-top: 1px solid #f3f3f3;
 }
 
@@ -634,15 +584,9 @@ footer .copyright .copyright-text {
 }
 
 footer .copyright .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 footer .copyright .social-icons div {
@@ -654,15 +598,9 @@ footer .copyright .social-icons img {
 }
 
 main .homepage ul li div:not(.product-data) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 main .homepage ul li div:not(.product-data) span {
@@ -680,12 +618,6 @@ main .homepage ul li div:not(.product-data) span:first-child {
 .result-wrapper .product-list li div:not(.product-data) span:first-child {
   border: 0;
   font-family: "Metropolis-Light", sans-serif;
-}
-
-.buy-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .buy-btn button {
@@ -715,12 +647,6 @@ main .homepage ul li div:not(.product-data) span:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 1px solid rgba(51, 51, 51, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .buy-btn button:last-child img {
@@ -737,18 +663,9 @@ main .homepage ul li div:not(.product-data) span:first-child {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    display: none;
-  }
-
-  .featured {
-    display: none;
-  }
-
-  .nav-profile {
-    display: none;
-  }
-
+  header,
+  .featured,
+  .nav-profile,
   .mobile-hide {
     display: none;
   }
