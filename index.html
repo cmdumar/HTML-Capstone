@@ -1,12 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
   <title>Zattix</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel=stylesheet href=css/style.css>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <nav class="flex align-items-center space-between">
+    <ul class="nav-links flex align-items-center">
+      <li class=nav-item>
+        <a class=nav-logo href=index.html>
+          <img src=assets/logo.svg alt="Zattix Logo">
+        </a>
+      </li>
+      <li class=nav-item>
+        <a href=index.html>
+          <span class=bg-icon>
+            <img src=assets/home-run.svg alt="House icon">
+          </span>
+          HOME
+        </a>
+      </li>
+      <li class="nav-item mobile-hide">
+        <a href=#>
+          <span class=bg-icon>
+            <img src=assets/number.svg alt="hash tag">
+          </span>
+          COLLECTIONS
+        </a>
+      </li>
+      <li class=nav-item>
+        <a href=#>
+          <span class=bg-icon>
+            <img src=assets/shopping-cart.svg alt="Shopping cart icon">
+          </span>
+          PURCHASE LIST
+        </a>
+      </li>
+      <li class="nav-item mobile-hide">
+        <button type=button>
+          POST AN AD
+        </button>
+      </li>
+      <li class="nav-item mobile-show">
+        <button 
+          type=button
+          onclick="location.href='search-results.html'">
+          Search
+        </button>
+      </li>
+    </ul>
+    <ul class="nav-profile flex align-items-center">
+      <li class=nav-item>
+        <a href=#>
+          <span class="bg-icon mail">
+            <img src=assets/mail.svg alt="Mail Icon">
+          </span>
+        </a>
+      </li>
+      <li class=nav-item>
+        <a class="profile-pic flex align-items-center" href=#>
+          Tom Doe
+          <div>
+            <img src=assets/profile-pic.jpg alt="Profile Picture">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class=title>
+      <h1>ZATTIX</h1>
+      <h3>Buying and Selling Couldn't be Simpler than this!</h3>
+    </section>
+    <div class=search-container>
+      <form class=flex>
+        <select name=categories>
+          <option>All Departments</option>
+          <option value=Electronics>Electronics</option>
+          <option value=Pets>Pets</option>
+          <option value=Fashion>Fashion</option>
+          <option value=Automotives>Automotives</option>
+        </select>
+        <input 
+          name=sub-category
+          type=text
+          placeholder="What do you search for ?" />
+        <input 
+          name=search-term
+          type=text
+          placeholder=Search />
+        <button
+          class=search-btn
+          type=button
+          onclick="location.href='search-results.html'"
+          >Search
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main class=wrapper>
+    <section class=featured>
+      <h2>HOT ADS</h2>
+      <article class="grid">
+        <div class=phone-img>
+          <img src=assets/featured.jpg alt="iPhone X Phone" >
+        </div>
+        <div class=phone-details>
+          <h3>iPhone X (Space Gray)</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            By:
+            <span>Tom Doe</span>
+          </p>
+          <p>
+            Location:
+          <span>San Francisco</span>
+          </p>
+
+          <div class="buy-btn flex">
+            <button type="button">$450</button>
+            <button type="button" class="flex">
+              <img src=assets/shopping-cart.svg alt="Shopping cart icon">
+              Purchase details
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <div class="gray-bg homepage">
+      <div class="fixed-w">
+        <div class=electronics>
+          <div class="tagline flex align-items-center">
+            <img src=assets/responsive.svg alt="Devices icon">
+            <p>
+              Electronics
+              <span>(Computers, Tablets, Mobile Phones and Cameras.)</span>
+            </p>
+          </div>
+
+          <div class=product-list>
+            <ul class="grid">
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=assets/electronic-1.jpg alt="Electronic Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>iPhone X 32GB - Gray</h3>
+                    <span>New</span>
+                    <p>From: San Francisco</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$800</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src="assets/electronic-2.jpg" alt="Electronic Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Macbook Pro 256GB - Black</h3>
+                    <span>Used</span>
+                    <p>From: Santa Barbara</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$1200</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src="assets/electronic-3.jpg" alt="Electronic Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Antique VCR TV</h3>
+                    <span>Antique</span>
+                    <p>From: New York</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$500</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src="assets/electronic-4.jpg" alt="Electronic Product">
+                </div>
+                <div class=product-data>
+                  <h3>Canon 605 BSD</h3>
+                  <span>New</span>
+                  <p>From: Atlanta</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$1900</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src="assets/electronic-5.jpg" alt="Electronic Product">
+                </div>
+                <div class=product-data>
+                  <h3>Xbox Controller</h3>
+                  <span>Used</span>
+                  <p>From: San Francisco</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$120</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src="assets/electronic-6.jpg" alt="Electronic Product">
+                </div>
+                <div class=product-data>
+                  <h3>Sony Xtreme Bass Headphone</h3>
+                  <span>New</span>
+                  <p>From: San Francisco</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$300</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class=pets>
+          <div class="tagline flex align-items-center">
+            <img src="assets/veterinary.svg" alt="Vetenery Logo">
+            <p>
+              Pets
+              <span>(Cats, Dogs, Rabbits, Parrots, Exotic Fish)</span>
+            </p>
+          </div>
+
+          <div class=product-list>
+            <ul class="grid">
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/mM7d2XxoOIE/1920x1280 alt="Pet Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Egyptian Cat</h3>
+                    <span>1 years old</span>
+                    <p>From: San Francisco, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$900</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/uQ1Xg4dT07I/1920x1280 alt="Pet Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Love Bird - Parrot</h3>
+                    <span>2 years old</span>
+                    <p>From: New York, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$600</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/N04FIfHhv_k/1920x1280 alt="Pet Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Tommy Dog</h3>
+                    <span>1 years old</span>
+                    <p>From: Atlanta, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$900</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/adK3Vu70DEQ/1920x1280 alt="Pet Product">
+                </div>
+                <div class=product-data>
+                  <h3>Cute Hamster</h3>
+                  <span>5 months old</span>
+                  <p>From: Atlanta, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$800</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/pQuCwYXXZsk/1920x1280 alt="Pet Product">
+                </div>
+                <div class=product-data>
+                  <h3>American Sheep</h3>
+                  <span>1.5 years old</span>
+                  <p>From: Florida, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$1200</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/Efj0HGPdPKs/1920x1280 alt="Pet Product">
+                </div>
+                <div class=product-data>
+                  <h3>Australian Rabbit</h3>
+                  <span>2 years old</span>
+                  <p>From: New Jersey, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$300</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class=fashion>
+          <div class="tagline flex align-items-center">
+            <img src="assets/sneaker.svg" alt="Sneakers Icon">
+            <p>
+              Fashion
+              <span>(Snickers, Watches, T-Shirts, Hand bags, Shirts)</span>
+            </p>
+          </div>
+
+          <div class=product-list>
+            <ul class="grid">
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/164_6wVEHfI/1920x1280 alt="Fashion Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Nike Sports Snickers</h3>
+                    <span>New</span>
+                    <p>From: San Francisco, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$400</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/9ugEeqflo70/1920x1280 alt="Fashion Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Summer Cotton T-Shirt</h3>
+                    <span>New</span>
+                    <p>From: Seatle, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$100</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                  <div class="equal-img flex">
+                    <img src=https://source.unsplash.com/TkwBK8nbA8I/1920x1280 alt="Fashion Product">
+                  </div>
+                  <div class=product-data>
+                    <h3>Prada Hand Bag</h3>
+                    <span>Used</span>
+                    <p>From: New York City, US</p>
+                    <div class="flex space-between">
+                      <span>+</span>
+                      <span>$1700</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/k5fUTay0ghw/1920x1280 alt="Fashion Product">
+                </div>
+                <div class=product-data>
+                  <h3>Leather Purchase</h3>
+                  <span>New</span>
+                  <p>From: Atlanta, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$300</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/Yka2yhGJwjc/1920x1280 alt="Fashion Product">
+                </div>
+                <div class=product-data>
+                  <h3>WD Smart Watch</h3>
+                  <span>Used</span>
+                  <p>From: New York, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$400</span>
+                  </div>
+                </div>
+              </li>
+              <li class="grid">
+                <div class="equal-img flex">
+                  <img src=https://source.unsplash.com/TnNo84AJJ5A/1920x1280 alt="Fashion Product">
+                </div>
+                <div class=product-data>
+                  <h3>Denim Jacket</h3>
+                  <span>New</span>
+                  <p>From: New Jersey, US</p>
+                  <div class="flex space-between">
+                    <span>+</span>
+                    <span>$200</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-nav grid">
+      <div class="about grid">
+        <div class="flex align-items-center">
+          <img src=assets/logo.svg alt=Logo>
+          <span class="font-500">ZATTIX</span>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore 
+          et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut 
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="nav-lists flex">
+        <div>
+          <h2>Categories</h2>
+          <ul>
+            <li class="cat-item">
+              <a href=#>Pets</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Fashion</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Electronic</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Food & Drinks</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Clothing</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Kids</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Automotives</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Kitchen</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Navigation</h2>
+          <ul>
+            <li class="cat-item">
+              <a href=#>Home</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Login</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Sign up</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Terms & Conditions</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>FAQ</a>
+            </li>
+            <li class="cat-item">
+              <a href=#>Help</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="region">
+        <div class="flex align-items-center">
+          <h2>COUNTRY</h2>
+          <button type="button">United States</button>
+        </div>
+        <div class="flex align-items-center">
+          <h2>LANGUAGE</h2>
+          <button type="button">English</button>
+        </div>
+        <div class="flex align-items-center">
+          <h2>CURRENCY</h2>
+          <button type="button">US Dollar</button>
+        </div>
+      </div>
+    </div>
+    <div class="copyright flex align-items-center space-between">
+      <div class="copyright-text">
+        <p class="font-100">
+          Copyright © 2015 Zattix.com. All Rights Reserved.
+        </p>
+      </div>
+      <div class="social-icons flex align-items-center">
+        <div>
+          <a href=#>
+            <img src=assets/twitter.svg alt="social icons">
+          </a>
+        </div>
+        <div>
+          <a href=#>
+            <img src=assets/linkedin.svg alt="social icons">
+          </a>
+        </div>
+        <div>
+          <a href=#>
+            <img src=assets/facebook.svg alt="social icons">
+          </a>
+        </div>
+        <div>
+          <a href=#>
+            <img src=assets/instagram-sketched.svg alt="social icons">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
