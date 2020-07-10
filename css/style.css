@@ -44,6 +44,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -59,6 +60,7 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   list-style: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -107,6 +109,7 @@ nav .profile-pic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -127,6 +130,7 @@ nav .profile-pic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -382,7 +386,7 @@ main .homepage .product-data {
   padding: 10px;
 }
 
-main .homepage .fixed-w {
+.fixed-w {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -517,13 +521,11 @@ main .homepage ul li {
 }
 
 .result-wrapper .product-list ul {
-  -ms-grid-columns: (minmax(450px, 1fr)) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .result-wrapper .product-list li {
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 1fr;
 }
 
 footer .footer-nav {
